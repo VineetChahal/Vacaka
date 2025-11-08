@@ -28,6 +28,18 @@ const cardsData: InfoCardData[] = [
 const AboutUs: React.FC = () => {
   return (
     <section className="bg-black text-white py-16 sm:py-24 overflow-hidden relative">
+      <style>{`
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        ::-webkit-scrollbar {
+          display: none;
+        }
+        
+        /* Hide scrollbar for IE, Edge and Firefox */
+        html {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;     /* Firefox */
+        }
+      `}</style>
       <AppBar />
       <div className="absolute inset-0 z-0 opacity-40">
         <svg

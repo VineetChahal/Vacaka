@@ -36,14 +36,12 @@ const Section = ({ id, className = "", children }: SectionProps) => {
 
 export default function VacakaLanding() {
   const location = useLocation();
-  // Scroll to section if hash is present in URL (after navigation or hash change)
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace("#", "");
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) {
-          // Set your desired offset here (e.g., 80 for 80px from top)
           const yOffset = -80;
           const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
@@ -154,9 +152,19 @@ export default function VacakaLanding() {
         @keyframes marquee {0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
         .marquee {display:flex; gap:2rem; animation:marquee 24s linear infinite;}
         .glass { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); backdrop-filter: blur(6px); }
+        
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        ::-webkit-scrollbar {
+          display: none;
+        }
+        
+        /* Hide scrollbar for IE, Edge and Firefox */
+        html {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;     /* Firefox */
+        }
       `}</style>
 
-      {/* Background video */}
       <video
         autoPlay
         muted
@@ -167,7 +175,6 @@ export default function VacakaLanding() {
       />
       <div className="fixed inset-0 bg-gradient-to-b from-transparent via-black/20 to-black -z-10" />
 
-      {/* Sticky header */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/60 border-b border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -195,7 +202,6 @@ export default function VacakaLanding() {
                 <button
                   key={text}
                   onClick={() => {
-                    // Always navigate to homepage with hash for internal sections
                     navigate(`/#${path}`);
                   }}
                   className="text-gray-300 hover:text-pink-400 transition cursor-pointer bg-transparent border-none"
@@ -277,7 +283,6 @@ export default function VacakaLanding() {
 
       <StorySections />
 
-      {/* Logos marquee */}
       <section className="py-12">
         <div className="max-w-6xl mx-auto overflow-hidden">
           <div className="marquee gap-8 flex items-center">
