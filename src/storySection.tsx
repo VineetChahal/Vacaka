@@ -21,18 +21,20 @@ const STORY_DATA: Story[] = [
       "There are moments in every startup when you realize your tech is too smart for its own good. For us, that moment came when our AI tried to speak Tamil...",
     imageUrl: "https://placehold.co/400x300/1e293b/ffffff?text=AI+Studio",
     readMoreUrl: "#story-1",
-    color: " #a1c0f9",
+        color:" #a1c0f9",
+
   },
   {
     id: 2,
-    title: "The Future of Dubbing is Real-Time (And India's Leading It)",
+    title: "The Future of Dubbing is Real-Time (And India's Leading It! Watch for yourself)",
     date: "October 2025",
     category: "Tech, Dubbing",
     description:
       "For years, dubbing was trapped in post-production. But now, real-time dubbing is rewriting the rules – and India is at the forefront of this revolution.",
     imageUrl: "https://placehold.co/400x300/1e293b/ffffff?text=Dubbing+Future",
     readMoreUrl: "#story-2",
-    color: " #fb64b6",
+        color:" #fb64b6",
+
   },
   {
     id: 3,
@@ -43,7 +45,7 @@ const STORY_DATA: Story[] = [
       "Voice tech has long chased perfection—clarity, pronunciation, zero noise. But somewhere along the way, we forgot what really matters: feeling.",
     imageUrl: "https://placehold.co/400x300/1e293b/ffffff?text=Emotion+AI",
     readMoreUrl: "#story-3",
-    color: " #c179e0",
+    color:" #c179e0",
   },
 ];
 
@@ -81,23 +83,20 @@ const StoryCard: React.FC<Story> = ({
       >
         <h2 className="text-xl font-bold mb-3 leading-snug">{title}</h2>
 
-        <p className="text-xs text-indigo-400 font-medium">
+        <p className="text-xs text-whitesmoke-400 font-medium">
           {date} - {category}
         </p>
       </div>
 
-      <div
-        className="h-px w-[100px] ml-5"
-        style={{ backgroundColor: color }}
-      ></div>
+      <div className="h-px w-[100px] ml-5" style={{backgroundColor: color }}></div>
 
       <div className="px-5 pb-5 pt-4 flex flex-col flex-grow">
         <p className="text-sm text-gray-400 mb-6 flex-grow">{description}</p>
         <a
-          href={readMoreUrl}
+ href={readMoreUrl}
           className="text-white text-sm font-medium flex items-center justify-center transition-colors hover:text-indigo-400 w-fit"
           onClick={(e) => e.preventDefault()}
-          style={{ color: color }}
+          style={{color: color }}
         >
           READ MORE
           <svg
@@ -106,7 +105,7 @@ const StoryCard: React.FC<Story> = ({
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            style={{ color: color }}
+            style={{color: color }}
           >
             <path
               strokeLinecap="round"

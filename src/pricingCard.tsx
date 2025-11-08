@@ -31,9 +31,9 @@ const PricingCard: React.FC<PricingPlan> = ({
   const buttonText: string = isCustom ? 'Contact Sales' : 'Buy Now';
 
   const renderTitle = (): React.ReactElement => (
-    <h3 className="text-xl font-semibold mb-4 text-white" style={{color: titleTagColor}}>
+    <h3 className="text-sm font-semibold mb-4 text-white" style={{color: titleTagColor}}>
       {title}
-      <span className="text-sm ml-2" style={{color: titleTagColor}}>{tag}</span>
+      <span className="text-xl ml-2" style={{color: titleTagColor}}>{tag}</span>
     </h3>
   );
 
@@ -67,8 +67,8 @@ const PricingCard: React.FC<PricingPlan> = ({
 const PricingCardSection: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white font-sans p-4 sm:p-8">
-      <header className="max-w-7xl mx-auto mb-12">
-        <h1 className="text-5xl font-bold mb-4">Bundle Pricing</h1>
+      <header className="max-w-7xl mx-auto mb-10">
+        <h1 className="text-4xl font-bold mb-2">Bundle Pricing</h1>
         <p className="text-lg text-gray-400">
           Simple plans for creators, studios, and enterprises.
         </p>

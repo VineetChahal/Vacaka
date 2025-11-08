@@ -18,12 +18,9 @@ interface SearchInputProps {
 }
 
 const items = [
-  { id: 1, imageUrl: "url1", caption: "Caption 1" },
-  { id: 2, imageUrl: "url2", caption: "Caption 2" },
-  { id: 3, imageUrl: "url3", caption: "Caption 3" },
-  { id: 4, imageUrl: "url4", caption: "Caption 4" },
-  { id: 5, imageUrl: "url5", caption: "Caption 5" },
-  { id: 6, imageUrl: "url6", caption: "Caption 6" },
+  { id: 1, imageUrl: "public/Images and PNGs/Career-Page-2.png", caption: "Create tech that listens like a human" },
+  { id: 2, imageUrl: "public/Images and PNGs/Career-Page-3.png", caption: "Blending creativity with logic" },
+  { id: 3, imageUrl: "public/Images and PNGs/Career-Page-4.png", caption: "Build something that truly matters" },
 ];
 
 const VacakaCareersPage: React.FC = () => {
@@ -95,12 +92,8 @@ const VacakaCareersPage: React.FC = () => {
           </div>
 
           <div className="space-y-8">
-            {/* AI Head Illustration */}
-            <div className="flex justify-center lg:justify-end mb-8">
-              <div className="relative">
-                <div className="w-64 h-64 relative">
-                </div>
-              </div>
+            <div className="flex relative justify-center lg:justify-end mb-8">
+              <img src="public\Images and PNGs\Career-Page-1.png" alt="carrer page image" className="h-84 w-124" />
             </div>
 
             <div>
@@ -109,7 +102,7 @@ const VacakaCareersPage: React.FC = () => {
               </h3>
 
               <div className="relative">
-                <div className="flex items-center bg-white rounded-full px-6 py-4 shadow-xl">
+                <div className="flex items-center bg-white rounded-xl px-6 py-4 shadow-xl">
                   <SearchInput
                     icon={<Search className="w-5 h-5 text-gray-400" />}
                     placeholder="Role eg: Data Analyst"

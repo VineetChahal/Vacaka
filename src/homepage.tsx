@@ -43,7 +43,8 @@ export default function VacakaLanding() {
         const el = document.getElementById(id);
         if (el) {
           const yOffset = -80;
-          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          const y =
+            el.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
         }
       }, 100);
@@ -165,17 +166,8 @@ export default function VacakaLanding() {
         }
       `}</style>
 
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="fixed inset-0 w-full h-full object-cover opacity-28 -z-20"
-        src="https://videos.pexels.com/video-files/3183048/3183048-hd_1280_720_30fps.mp4"
-      />
-      <div className="fixed inset-0 bg-gradient-to-b from-transparent via-black/20 to-black -z-10" />
 
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/60 border-b border-gray-800">
+      <header className="fixed top-0 left-0 right-0 z-100 backdrop-blur-md bg-black/60 border-b border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-md bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center text-white font-bold shadow-md">
@@ -223,8 +215,12 @@ export default function VacakaLanding() {
       <div className="h-20" />
 
       {/* HERO */}
-      <Section id="home">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+      <Section id="home" className="relative overflow-hidden mt-4">
+          <img
+            className="absolute inset-0 w-full h-full object-cover opacity-28 z-10"
+            src="public\Videos\GIF-Purple-BG-Video.gif"
+          />
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center relative z-10">
           <div>
             <motion.h1
               initial={{ opacity: 0, y: 10 }}
@@ -265,7 +261,7 @@ export default function VacakaLanding() {
         <OurStory />
       </div>
 
-      <div id="products">
+      <div id="products" className="z-50">
         <ProductsServices />
       </div>
 

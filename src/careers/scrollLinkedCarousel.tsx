@@ -123,7 +123,7 @@ const ScrollLinkedCarousel: React.FC<ScrollLinkedCarouselProps> = ({
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 blur-3xl -z-10 rounded-2xl" />
               </div>
 
-              <div className="flex gap-2 mt-6 justify-center overflow-x-auto pb-2">
+              {/* <div className="flex gap-2 mt-6 justify-center overflow-x-auto pb-2">
                 {items.map((item, index) => (
                   <button
                     key={item.id}
@@ -141,7 +141,7 @@ const ScrollLinkedCarousel: React.FC<ScrollLinkedCarouselProps> = ({
                     />
                   </button>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

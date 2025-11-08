@@ -99,6 +99,10 @@ const ContactForm: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 flex flex-col relative overflow-hidden">
       <AppBar />
+      <img
+        className="absolute inset-0 w-full h-full object-cover opacity-10 z-0"
+        src="public\Videos\GIF Blue BG Video.gif"
+      />
       <div className="flex-1 flex flex-col items-center justify-center p-4 mt-24">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute bottom-0 left-20 w-96 h-96">

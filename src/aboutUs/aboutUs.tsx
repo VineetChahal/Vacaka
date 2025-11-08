@@ -61,10 +61,7 @@ const AboutUs: React.FC = () => {
         </h2>
         <div
           className="absolute inset-x-0 top-0 h-40 bg-cover bg-center opacity-10"
-          style={{
-            backgroundImage:
-              "url(https://placehold.co/1200x200/505050/ffffff?text=Studio+Background)",
-          }}
+            style={{ backgroundImage: "url('public/Videos/GIF-Purple-BG-Video.gif')",}}   
         ></div>
       </div>
 
@@ -72,9 +69,9 @@ const AboutUs: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-12">
           <div className="w-full lg:w-1/2 flex justify-center">
             <img
-              src="https://placehold.co/500x500/3c0a52/ffffff?text=AI+Robot+Voice+Studio"
+              src="public\Images and PNGs\ABOUT US Pic.png"
               alt="AI Robot Working with Media Screens"
-              className="w-full max-w-md h-auto object-cover rounded-lg shadow-2xl"
+              className="w-full h-full max-w-md h-auto object-cover rounded-lg shadow-2xl"
             />
           </div>
 
