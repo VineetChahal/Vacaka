@@ -20,9 +20,9 @@ interface SearchInputProps {
 }
 
 const items = [
-  { id: 1, imageUrl: "public/Images and PNGs/Career-Page-2.png", caption: "Create tech that listens like a human" },
-  { id: 2, imageUrl: "public/Images and PNGs/Career-Page-3.png", caption: "Blending creativity with logic" },
-  { id: 3, imageUrl: "public/Images and PNGs/Career-Page-4.png", caption: "Build something that truly matters" },
+  { id: 1, imageUrl: "/Images and PNGs/Career-Page-2.png", caption: "Create tech that listens like a human" },
+  { id: 2, imageUrl: "/Images and PNGs/Career-Page-3.png", caption: "Blending creativity with logic" },
+  { id: 3, imageUrl: "/Images and PNGs/Career-Page-4.png", caption: "Build something that truly matters" },
 ];
 
 const VacakaCareersPage: React.FC = () => {
@@ -95,7 +95,7 @@ const VacakaCareersPage: React.FC = () => {
 
           <div className="space-y-8">
             <div className="flex relative justify-center lg:justify-end mb-8">
-              <img src="public\Images and PNGs\Career-Page-1.png" alt="carrer page image" className="h-84 w-124" />
+              <img src="\Images and PNGs\Career-Page-1.png" alt="carrer page image" className="h-84 w-124" />
             </div>
 
             <div>

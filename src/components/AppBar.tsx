@@ -7,7 +7,7 @@ const AppBar: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img
-            src="public\Images and PNGs\vacaka-svg.svg"
+            src="\Images and PNGs\vacaka-svg.svg"
             alt="Vacaka.AI"
             className="h-16 border-2 border-gray-300 rounded-md"
           />

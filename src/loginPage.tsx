@@ -48,13 +48,13 @@ const LoginPage: React.FC = () => {
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       <img
         className="absolute inset-0 w-full h-full object-cover opacity-28 z-10"
-        src="public\Videos\GIF-Purple-BG-Video.gif"
+        src="\Videos\GIF-Purple-BG-Video.gif"
       />
       <div className="relative bg-stone-100 rounded-3xl shadow-2xl p-12 max-w-md w-full text-center z-10">
         <div className="mb-8 inline-block">
           <div className="w-18 h-18 bg-black rounded-2xl flex items-center justify-center">
             <img
-              src="public\SVGs\10.svg"
+              src="\SVGs\10.svg"
               alt="login logo"
               className="h-20 w-35 rounded-lg overflow-hidden"
             />

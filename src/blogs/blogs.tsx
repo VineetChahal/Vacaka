@@ -17,7 +17,7 @@ const sections: ContentSection[] = [
   {
     title: "When Our AI Tried to Speak Tamil (and What Happened Next!)",
     brandNames: ["Vacaka.AI"],
-    heroImage: "public/Images and PNGs/BLOG 1.png",
+    heroImage: "/Images and PNGs/BLOG 1.png",
     leftContent: [
       "There are moments in every startup when you realize your tech is too smart for its own good.",
       "For us, that moment came when our AI tried to speak Tamil… with a Delhi accent. 😅",
@@ -34,7 +34,7 @@ const sections: ContentSection[] = [
   {
     title: "The Future of Dubbing Is Real-Time (And India's Leading It)",
     brandNames: ["Vācaka.AI’s Dubb™", "This is the era of “live it now.”"],
-    heroImage: "public/Images and PNGs/BLOG 2.png",
+    heroImage: "/Images and PNGs/BLOG 2.png",
     leftContent: [
       "Batch processing. Endless revisions. Late-night studio calls.",
       "For years, dubbing has been a slow, manual art trapped in a digital world.",
@@ -52,7 +52,7 @@ const sections: ContentSection[] = [
   {
     title: "Why Emotion Is the New Benchmark for Voice AI",
     brandNames: ["Vacaka.AI"],
-    heroImage: "public/Images and PNGs/BLOG 3.png",
+    heroImage: "/Images and PNGs/BLOG 3.png",
     leftContent: [
       "For decades, voice tech has chased perfection - clarity, pronunciation, zero noise.",
       "But somewhere along the way, it forgot what really matters: feeling.",

@@ -208,8 +208,7 @@ export default function VacakaLanding() {
       <Section id="home" className="relative overflow-hidden mt-4">
         <img
           className="absolute inset-0 w-full h-full object-cover opacity-28 z-10"
-          // src="public\Videos\GIF-Purple-BG-Video.gif"
-          src="public\SVGs\Landing Page BG.svg"
+          src="\SVGs\Landing Page BG.svg"
         />
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center relative z-10">
           <div>
@@ -247,7 +246,7 @@ export default function VacakaLanding() {
           </div>
           <div>
             <img
-              src="public\Videos\GIF Landing Page Video.gif"
+              src="\Videos\GIF Landing Page Video.gif"
               alt="voice vid"
               className="h-80 w-300"
             />
@@ -298,7 +297,7 @@ export default function VacakaLanding() {
       <div className="flex flex-row items-center justify-center my-20">
         <img
           alt="video"
-          src="public\Videos\Cinematic Logo Reveal.gif"
+          src="\Videos\Cinematic Logo Reveal.gif"
           className="h-40"
         />
       </div>

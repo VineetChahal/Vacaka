@@ -62,7 +62,7 @@ const AboutUs: React.FC = () => {
         <div
           className="absolute inset-x-0 top-0 h-40 bg-cover bg-center opacity-10"
           style={{
-            backgroundImage: "url('public/Videos/GIF-Purple-BG-Video.gif')",
+            backgroundImage: "url('/Videos/GIF-Purple-BG-Video.gif')",
           }}
         ></div>
       </div>
@@ -71,7 +71,7 @@ const AboutUs: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-12">
           <div className="w-full lg:w-1/2 flex justify-center">
             <img
-              src="public\Images and PNGs\ABOUT US Pic.png"
+              src="\Images and PNGs\ABOUT US Pic.png"
               alt="AI Robot Working with Media Screens"
               className="w-full h-full max-w-md h-auto object-cover rounded-lg shadow-2xl"
             />
@@ -109,7 +109,7 @@ const AboutUs: React.FC = () => {
 
       <TeamSection />
       <div className="h-160 w-full overflow-hidden border-1 border-blue-300">
-      <img src="public\SVGs\19.svg" className="w-full" />
+      <img src="\SVGs\19.svg" className="w-full" />
       </div>
       <TeamMember />
     </section>

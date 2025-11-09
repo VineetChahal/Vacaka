@@ -101,7 +101,7 @@ const ContactForm: React.FC = () => {
       <AppBar />
       <img
         className="absolute inset-0 w-full h-full object-cover opacity-10 z-0"
-        src="public\Videos\GIF Blue BG Video.gif"
+        src="\Videos\GIF Blue BG Video.gif"
       />
       <div className="flex-1 flex flex-col items-center justify-center p-4 mt-24">
       <div className="absolute inset-0 opacity-20">
