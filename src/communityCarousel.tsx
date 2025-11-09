@@ -38,6 +38,15 @@ const cards: Card[] = [
     color: "#C45F8C",
     img: "https://i.pravatar.cc/200?img=32",
   },
+  {
+    id: 4,
+    name: "abc",
+    role: "ASSOCIATE VP – NDTV",
+    text:
+      "We were told live dubbing was science fiction. Vācaka.AI’s Streaming Inference let us go live with regional broadcasts in five languages...",
+    color: "#C45F8C",
+    img: "https://i.pravatar.cc/200?img=32",
+  },
 ];
 
 export default function SmoothCarousel(): ReactElement {
@@ -110,7 +119,7 @@ export default function SmoothCarousel(): ReactElement {
                     : "grayscale(40%) brightness(85%)",
                 }}
               >
-                <div className="flex justify-center -mt-16 mb-2">
+                <div className="flex justify-center -mt-16 mb-8">
                   <img
                     src={card.img}
                     className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-md"
@@ -119,7 +128,7 @@ export default function SmoothCarousel(): ReactElement {
                 </div>
 
                 <div
-                  className="text-5xl -mt-3"
+                  className="text-7xl -top-6 left-10  font-bold absolute left-1/2 transform -translate-x-1/2"
                   style={{ color: card.color }}
                 >
                   “

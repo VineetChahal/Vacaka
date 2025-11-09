@@ -4,6 +4,7 @@ import type { ChangeEvent } from "react";
 import { Search, MapPin, X } from "lucide-react";
 import ScrollLinkedCarousel from "./scrollLinkedCarousel";
 import { Section } from "../homepage";
+import HotJobsCarousel from "./HotJobsCarousel";
 
 interface SearchFormData {
   role: string;
@@ -167,6 +168,7 @@ const VacakaCareersPage: React.FC = () => {
         items={items}
         scrollMultiplier={1.5}
       />
+      <HotJobsCarousel />
     </div>
   );
 };

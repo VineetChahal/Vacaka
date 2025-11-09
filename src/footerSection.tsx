@@ -103,9 +103,9 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Information</h3>
             <ul className="space-y-3 text-sm">
-              <FooterLink href="#">About Us</FooterLink>
-              <FooterLink href="#">Our Story</FooterLink>
-              <FooterLink href="#">Blogs</FooterLink>
+              <FooterLink href="/about-us">About Us</FooterLink>
+              <FooterLink href="#ourstory">Our Story</FooterLink>
+              <FooterLink href="/blogs">Blogs</FooterLink>
               <FooterLink href="#">Testimonials</FooterLink>
               <FooterLink href="#">Trust & Safety</FooterLink>
             </ul>
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Helpful Links</h3>
             <ul className="space-y-3 text-sm">
-              <FooterLink href="#">Products</FooterLink>
+              <FooterLink href="#products">Products</FooterLink>
               <FooterLink href="#">Supports</FooterLink>
               <FooterLink href="#">Terms & Conditions</FooterLink>
               <FooterLink href="#">Privacy Policy</FooterLink>

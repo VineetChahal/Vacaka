@@ -95,14 +95,14 @@ function ProductsServices() {
 
                         <button
                             style={{ backgroundColor: card.color }}
-                            className="text-black font-semibold px-4 py-3 rounded-full mt-8 hover:opacity-90 transition-opacity"
+                            className="text-black font-semibold px-4 py-3 rounded-full mt-8 transition-opacity"
                         >
                             {card.button}
                         </button>
 
                         <ArrowUpRight
                             size={32}
-                            className="absolute bottom-2 right-2 text-yellow-300"
+                            className="absolute bottom-2 right-2 text-yellow-300 cursor-pointer"
                         />
                     </div>
                 ))}

@@ -11,6 +11,7 @@ import Footer from "./footerSection";
 import OurStory from "./ourStory";
 import ProductsServices from "./productAndServicesSection";
 import LoginPage from "./loginPage";
+import RandomThoughts from "./randomThoughts";
 
 interface SectionProps {
   id: string;
@@ -167,14 +168,8 @@ export default function VacakaLanding() {
       <header className="fixed top-0 left-0 right-0 z-100 backdrop-blur-md bg-black/60 border-b border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-md bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center text-white font-bold shadow-md">
-              V
-            </div>
             <div>
-              <div className="text-white font-semibold">Vācaka.AI</div>
-              <div className="text-xs text-gray-400 -mt-0.5">
-                AI Dubbing Infrastructure — India
-              </div>
+              <img src="" alt="" />
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -201,9 +196,9 @@ export default function VacakaLanding() {
             )}
             <Link
               to="/contact"
-              className="ml-2 inline-block bg-gradient-to-r from-pink-600 to-purple-600 px-4 py-2 rounded-md text-white shadow hover:scale-105 transition-transform"
+              className="ml-2 inline-block bg-gradient-to-r from-pink-800 to-purple-800 px-4 py-2 rounded-md text-white shadow hover:scale-105 transition-transform"
             >
-              Query
+              Talk to Sales
             </Link>
           </nav>
         </div>
@@ -213,7 +208,8 @@ export default function VacakaLanding() {
       <Section id="home" className="relative overflow-hidden mt-4">
         <img
           className="absolute inset-0 w-full h-full object-cover opacity-28 z-10"
-          src="public\Videos\GIF-Purple-BG-Video.gif"
+          // src="public\Videos\GIF-Purple-BG-Video.gif"
+          src="public\SVGs\Landing Page BG.svg"
         />
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center relative z-10">
           <div>
@@ -237,22 +233,32 @@ export default function VacakaLanding() {
             <div className="mt-8 flex gap-4">
               <Link
                 to="/contact"
-                className="px-6 py-3 rounded-md bg-pink-600 hover:bg-pink-700 text-white font-semibold shadow-lg transform hover:-translate-y-0.5 transition"
+                className="px-6 py-3 rounded-md bg-gradient-to-r from-pink-800 to-purple-800 text-white font-semibold shadow-lg transform hover:-translate-y-0.5 transition"
               >
-                Book Pilot
+                Live Demo
               </Link>
-              <a
-                href="#services"
+              <Link
+                to="#LoginPage"
                 className="px-6 py-3 rounded-md border border-gray-700 text-gray-200 hover:text-white hover:border-pink-500 transition"
               >
-                See Services
-              </a>
+                Start free trial
+              </Link>
             </div>
+          </div>
+          <div>
+            <img
+              src="public\Videos\GIF Landing Page Video.gif"
+              alt="voice vid"
+              className="h-80 w-300"
+            />
           </div>
         </div>
       </Section>
       <Section id="ourstory" className="mt-30">
         <OurStory />
+      </Section>
+      <Section id="testimonials" className="my-20">
+        <RandomThoughts />
       </Section>
       <Section id="products">
         <ProductsServices />
@@ -269,12 +275,12 @@ export default function VacakaLanding() {
       <Section id="pricing" className="-mb-40">
         <PricingCardSection />
       </Section>
-      <Section id="story">
+      <Section id="story" className="mb-10">
         <StorySections />
       </Section>
-      <section>
+      <section className="mb-10">
         <div className="max-w-6xl mx-auto overflow-hidden flex flex-col item-center justify-center">
-          <div className="flex items-centrew">
+          <div className="flex items-center justify-center mb-9">
             <p className="text-3xl font-bold">
               Trusted by the voices that power India’s biggest screens
             </p>
@@ -286,7 +292,16 @@ export default function VacakaLanding() {
           </div>
         </div>
       </section>
-      <LoginPage />
+      <Section id="LoginPage">
+        <LoginPage />
+      </Section>
+      <div className="flex flex-row items-center justify-center my-20">
+        <img
+          alt="video"
+          src="public\Videos\Cinematic Logo Reveal.gif"
+          className="h-40"
+        />
+      </div>
       <Section id="footer">
         <Footer />
       </Section>{" "}

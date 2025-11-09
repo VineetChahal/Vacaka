@@ -61,7 +61,9 @@ const AboutUs: React.FC = () => {
         </h2>
         <div
           className="absolute inset-x-0 top-0 h-40 bg-cover bg-center opacity-10"
-            style={{ backgroundImage: "url('public/Videos/GIF-Purple-BG-Video.gif')",}}   
+          style={{
+            backgroundImage: "url('public/Videos/GIF-Purple-BG-Video.gif')",
+          }}
         ></div>
       </div>
 
@@ -106,7 +108,9 @@ const AboutUs: React.FC = () => {
       <InfoCardList cards={cardsData} />
 
       <TeamSection />
-
+      <div className="h-160 w-full overflow-hidden border-1 border-blue-300">
+      <img src="public\SVGs\19.svg" className="w-full" />
+      </div>
       <TeamMember />
     </section>
   );

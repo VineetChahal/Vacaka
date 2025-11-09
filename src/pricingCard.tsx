@@ -27,7 +27,7 @@ const PricingCard: React.FC<PricingPlan> = ({
 }) => {
   const isCustom = price === 'Custom';
   const displayPrice: string = isCustom ? 'Custom' : `₹ ${price.toLocaleString('en-IN')}`;
-  const displayMinutes: string = isCustom ? 'Custom' : `${minutes.toLocaleString()} minutes`;
+  const displayMinutes: string = isCustom ? 'Custom' : `${minutes.toLocaleString()}`;
   const buttonText: string = isCustom ? 'Contact Sales' : 'Buy Now';
 
   const renderTitle = (): React.ReactElement => (

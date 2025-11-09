@@ -9,7 +9,7 @@ const AppBar: React.FC = () => {
           <img
             src="public\Images and PNGs\vacaka-svg.svg"
             alt="Vacaka.AI"
-            className="h-36 border-2 border-gray-300 rounded-md"
+            className="h-16 border-2 border-gray-300 rounded-md"
           />
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -42,7 +42,7 @@ const AppBar: React.FC = () => {
           )}
           <Link
             to="/contact"
-            className="ml-2 inline-block bg-gradient-to-r from-pink-600 to-purple-600 px-4 py-2 rounded-md text-white shadow hover:scale-105 transition-transform"
+            className="ml-2 inline-block bg-gradient-to-r from-pink-800 to-purple-800 px-4 py-2 rounded-md text-white shadow hover:scale-105 transition-transform"
           >
             Talk to Sales
           </Link>
