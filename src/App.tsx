@@ -8,7 +8,7 @@ import ContactForm from "./query/contactForm";
 
 function App() {
   return (
-    <Router basename="/Vacaka">
+    <Router>
       <Routes>
         <Route path="/" element={<VacakaLanding />} />
         <Route path="/about-us" element={<AboutUs />} />
