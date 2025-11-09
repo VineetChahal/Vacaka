@@ -62,14 +62,14 @@ export default function VacakaLanding() {
   const navigate = useNavigate();
 
   const logos = [
-    "public/Images and PNGs/Logo1.png",
-    "public/Images and PNGs/Logo2.png",
-    "public/Images and PNGs/Logo3.png",
-    "public/Images and PNGs/Logo4.png",
-    "public/Images and PNGs/Logo5.png",
-    "public/Images and PNGs/Logo6.png",
-    "public/Images and PNGs/Logo7.png",
-    "public/Images and PNGs/Logo8.png",
+    "public/SVGs/1.svg",
+    "public/SVGs/2.svg",
+    "public/SVGs/3.svg",
+    "public/SVGs/4.svg",
+    "public/SVGs/5.svg",
+    "public/SVGs/6.svg",
+    "public/SVGs/7.svg",
+    "public/SVGs/8.svg",
   ];
 
   const testimonialsRef = useRef<HTMLDivElement | null>(null);
@@ -273,10 +273,15 @@ export default function VacakaLanding() {
         <StorySections />
       </Section>
       <section>
-        <div className="max-w-6xl mx-auto overflow-hidden">
+        <div className="max-w-6xl mx-auto overflow-hidden flex flex-col item-center justify-center">
+          <div className="flex items-centrew">
+            <p className="text-3xl font-bold">
+              Trusted by the voices that power India’s biggest screens
+            </p>
+          </div>
           <div className="marquee gap-8 flex items-center w-full">
             {logos.concat(logos).map((l, i) => (
-                <img src={l} alt="imgaes"  key={i} className="h-18 w-18"/>
+              <img src={l} alt="imgaes" key={i} className="h-18 w-28" />
             ))}
           </div>
         </div>
