@@ -1,12 +1,7 @@
 import React from 'react';
+import type { InfoCardData } from '../data';
 
-export interface InfoCardData {
-  title: string;
-  description: string;
-  backgroundColor: string;
-}
-
-export interface InfoCardListProps {
+interface InfoCardListProps {
   cards: InfoCardData[];
 }
 

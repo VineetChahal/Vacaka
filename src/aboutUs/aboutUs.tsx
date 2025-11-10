@@ -1,29 +1,10 @@
 import React from "react";
 import AppBar from "../components/AppBar";
-import { InfoCardList, type InfoCardData } from "./infoCard";
+import { InfoCardList } from "./infoCard";
 import TeamSection from "./team";
-import { TeamMember } from "./teamMemeber";
-
-const cardsData: InfoCardData[] = [
-  {
-    title: "OUR VISION",
-    description:
-      "To be the global standard for simultaneous broadcast localization, transforming media from any language into a culturally and emotionally resonant experience the instant it's created.",
-    backgroundColor: "#9B6BA8",
-  },
-  {
-    title: "OUR MISSION",
-    description:
-      "To empower media, creators, and enterprises with multilingual voice infrastructure that delivers real-time dubbing, cloning, and compliance — ensuring every voice we generate is audible, emotional, and accountable.",
-    backgroundColor: "#6CA6E8",
-  },
-  {
-    title: "TRUST & SAFETY @Vacaka.AI",
-    description:
-      "At Vacaka.AI, we don't just build AI voices — we build trust. Our Audited Identity Layer creates a digital signature for every voice we generate. We guarantee: Every voice comes with verified consent, is traceable, secure, compliant, and audit-ready.",
-    backgroundColor: "#E679B8",
-  },
-];
+import TeamMemberList from "./teamMemeber";
+import { cardsData } from "../data";
+import { Images } from "../constants/svgPaths";
 
 const AboutUs: React.FC = () => {
   return (
@@ -55,25 +36,24 @@ const AboutUs: React.FC = () => {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div className="relative z-10 max-w-full h-30 mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <img
+          src={Images.ABOUT_US_BG}
+          alt="ABOUT_US_BG"
+          className="absolute inset-0 w-full h-full object-cover opacity-20 z-10"
+        />
         <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-center">
           ABOUT US
         </h2>
-        <div
-          className="absolute inset-x-0 top-0 h-40 bg-cover bg-center opacity-10"
-          style={{
-            backgroundImage: "url('/Videos/GIF-Purple-BG-Video.gif')",
-          }}
-        ></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-12">
           <div className="w-full lg:w-1/2 flex justify-center">
             <img
-              src="\Images and PNGs\ABOUT US Pic.png"
+              src={Images.ABOUT_US_PIC}
               alt="AI Robot Working with Media Screens"
-              className="w-full h-full max-w-md h-auto object-cover rounded-lg shadow-2xl"
+              className="w-full h-full max-w-md object-cover object-center rounded-lg shadow-2xl scale-180 mt-15"
             />
           </div>
 
@@ -108,10 +88,10 @@ const AboutUs: React.FC = () => {
       <InfoCardList cards={cardsData} />
 
       <TeamSection />
-      <div className="h-160 w-full overflow-hidden border-1 border-blue-300">
-      <img src="\SVGs\19.svg" className="w-full" />
+      <div className="h-100 w-full overflow-hidden">
+        <img src={Images.MEET_TEAM_WAVE} className="w-full relative -top-70 scale-110" />
       </div>
-      <TeamMember />
+      <TeamMemberList />
     </section>
   );
 };

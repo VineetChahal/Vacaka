@@ -60,7 +60,7 @@ const ScrollLinkedCarousel: React.FC<ScrollLinkedCarouselProps> = ({
   return (
     <div
       ref={sectionRef}
-      className="relative bg-black border-2 border-red-500"
+      className="relative bg-black"
       style={{ minHeight: sectionHeight }}
     >
       <div className="sticky top-0 h-screen flex items-center">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { jobList } from "../data";
 
 interface Job {
   title: string;
@@ -9,27 +10,6 @@ interface Job {
 interface HotJobsCarouselProps {
   jobs?: Job[];
 }
-
-const jobList = [
-  {
-    title: "AI Research Intern",
-    description:
-      "Help our voice models learn how to feel. Work with the tech that powers emotion and authenticity in 22+ Indian languages.",
-    location: "Remote / Hybrid",
-  },
-  {
-    title: "Frontend Developer",
-    description:
-      "Build sleek, performant UI that helps creators and studios localize content effortlessly.",
-    location: "Bangalore / Remote",
-  },
-  {
-    title: "ML Engineer",
-    description:
-      "Join our team pushing boundaries in real-time multilingual emotion modeling.",
-    location: "Remote",
-  },
-];
 
 const HotJobsCarousel: React.FC<HotJobsCarouselProps> = ({ jobs = jobList }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

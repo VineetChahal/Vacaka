@@ -1,5 +1,5 @@
 import "./index.css";
-import VacakaLanding from './homepage'
+import VacakaLanding from './homePage/homepage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Careers from './careers/carrers';
 import AboutUs from "./aboutUs/aboutUs";

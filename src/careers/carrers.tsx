@@ -3,8 +3,10 @@ import AppBar from "../components/AppBar";
 import type { ChangeEvent } from "react";
 import { Search, MapPin, X } from "lucide-react";
 import ScrollLinkedCarousel from "./scrollLinkedCarousel";
-import { Section } from "../homepage";
+import { Section } from "../homePage/homepage";
 import HotJobsCarousel from "./HotJobsCarousel";
+import { careerPageItems } from "../data";
+import { Images } from "../constants/svgPaths";
 
 interface SearchFormData {
   role: string;
@@ -18,12 +20,6 @@ interface SearchInputProps {
   onChange: (value: string) => void;
   ariaLabel: string;
 }
-
-const items = [
-  { id: 1, imageUrl: "/Images and PNGs/Career-Page-2.png", caption: "Create tech that listens like a human" },
-  { id: 2, imageUrl: "/Images and PNGs/Career-Page-3.png", caption: "Blending creativity with logic" },
-  { id: 3, imageUrl: "/Images and PNGs/Career-Page-4.png", caption: "Build something that truly matters" },
-];
 
 const VacakaCareersPage: React.FC = () => {
   const [searchData, setSearchData] = useState<SearchFormData>({
@@ -52,50 +48,54 @@ const VacakaCareersPage: React.FC = () => {
       <AppBar />
       <Section id="careerPage" className="max-w-7xl mx-auto px-6 py-12">
         <header className="mb-8 mt-20">
-          <h1 className="text-4xl font-medium tracking-wide mb-2 leading-tight">
+          <h1 className="text-5xl font-medium tracking-wide mb-2 leading-tight">
             Careers @Vācaka.AI
           </h1>
         </header>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
+          <div className="space-y-8 boder-2 border-purple-600">
             <div>
               <h2 className="text-5xl lg:text-6xl font-bold mb-6">
-                <span className="block bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 bg-clip-text text-transparent opacity-70">
                   Work Where
                 </span>
-                <span className="block bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 bg-clip-text text-transparent opacity-70">
                   Voice Meets
                 </span>
-                <span className="block bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 bg-clip-text text-transparent opacity-70">
                   Vision!
                 </span>
               </h2>
+            </div>
 
-              <div className="space-y-4 text-gray-300">
-                <p className="text-base leading-relaxed">
-                  Voices that feel, languages that connect — that's the
-                  Vācaka.AI way.
-                </p>
-                <p className="text-base leading-relaxed">
-                  At Vācaka.AI, we're reimagining how the world hears and feels
-                  media.
-                </p>
-                <p className="text-base leading-relaxed">
-                  Join a team of dreamers, coders, and creators turning sound
-                  into an experience.
-                </p>
-              </div>
-
-              <p className="mt-8 text-lg italic bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Be a part of the voice revolution.
+            <div className="space-y-4 text-gray-300">
+              <p className="text-base leading-relaxed text-lg font-semibold">
+                Voices that feel, languages that connect — that's the Vācaka.AI
+                way.
+              </p>
+              <p className="text-base leading-relaxed text-lg font-semibold">
+                At Vācaka.AI, we're reimagining how the world hears and feels
+                media.
+              </p>
+              <p className="text-base leading-relaxed text-lg font-semibold">
+                Join a team of dreamers, coders, and creators turning sound into
+                an experience.
               </p>
             </div>
+
+            <p className="mt-8 text-4xl font-bold italic bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent opacity-70">
+              Be a part of the voice revolution.
+            </p>
           </div>
 
-          <div className="space-y-8">
+          <div>
             <div className="flex relative justify-center lg:justify-end mb-8">
-              <img src="public\Images and PNGs\Career-Page-1.png" alt="carrer page image" className="h-84 w-124" />
+              <img
+                src={Images.CAREER_PAGE}
+                alt="carrer page image"
+                className="scale-125"
+              />
             </div>
 
             <div>
@@ -165,10 +165,12 @@ const VacakaCareersPage: React.FC = () => {
       `}</style>
       <ScrollLinkedCarousel
         title="Why Work with Us?"
-        items={items}
+        items={careerPageItems}
         scrollMultiplier={1.5}
       />
-      <HotJobsCarousel />
+      <Section id="hotJobs">
+        <HotJobsCarousel />
+      </Section>
     </div>
   );
 };

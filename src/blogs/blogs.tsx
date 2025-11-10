@@ -1,71 +1,9 @@
 import React from "react";
 import AppBar from "../components/AppBar";
-
-interface ContentSection {
-  title: string;
-  leftContent: string[];
-  rightContent: string[];
-  brandNames?: string[];
-  heroImage: string;
-}
-
+import { sections, type ContentSection } from "../data";
 interface EmotionBannerProps {
   sections?: ContentSection[];
 }
-
-const sections: ContentSection[] = [
-  {
-    title: "When Our AI Tried to Speak Tamil (and What Happened Next!)",
-    brandNames: ["Vacaka.AI"],
-    heroImage: "/Images and PNGs/BLOG 1.png",
-    leftContent: [
-      "There are moments in every startup when you realize your tech is too smart for its own good.",
-      "For us, that moment came when our AI tried to speak Tamil… with a Delhi accent. 😅",
-      "We had just finished a prototype of our real-time dubbing engine when we played back the first Tamil output - and it sounded, well, like your North Indian cousin reading a Tamil menu for the first time.",
-      "But that’s where the magic began.",
-    ],
-    rightContent: [
-      "We didn’t fix the code - we taught the AI to listen. To understand cultural tone, syllable rhythm, and the music behind every word.",
-      "Because to us, it’s not just “voice generation.” It’s voice understanding.",
-      "Today, that same engine can pick up emotion shifts, local dialects, and regional humor - and sound like it’s from the place it’s speaking to.",
-      "That’s the beauty of making AI that listens before it speaks.",
-    ],
-  },
-  {
-    title: "The Future of Dubbing Is Real-Time (And India's Leading It)",
-    brandNames: ["Vācaka.AI’s Dubb™", "This is the era of “live it now.”"],
-    heroImage: "/Images and PNGs/BLOG 2.png",
-    leftContent: [
-      "Batch processing. Endless revisions. Late-night studio calls.",
-      "For years, dubbing has been a slow, manual art trapped in a digital world.",
-      "Then came the revolution - real-time dubbing.",
-      "Imagine translating and voicing a scene into 22 languages… as it happens.",
-      "No post-production, no waiting, no lag.",
-    ],
-    rightContent: [
-      "India, with its linguistic diversity, isn’t just adapting to this change - it’s leading it.",
-      "And with Vācaka.AI’s Dubb™ engine, studios can now go live simultaneously in every major Indian language — with emotion, accuracy, and compliance intact.:",
-      "The age of “dub it later” is over.",
-      "This is the era of “live it now.”",
-    ],
-  },
-  {
-    title: "Why Emotion Is the New Benchmark for Voice AI",
-    brandNames: ["Vacaka.AI"],
-    heroImage: "/Images and PNGs/BLOG 3.png",
-    leftContent: [
-      "For decades, voice tech has chased perfection - clarity, pronunciation, zero noise.",
-      "But somewhere along the way, it forgot what really matters: feeling.",
-      "When someone says \"I'm fine,\" it's not the words that tell you how they feel - it's the emotion.",
-      "That's what we're bringing back with Vacaka.AI: voices that understand tone, empathy, and intent.",
-    ],
-    rightContent: [
-      "Our emotion-calibrated dubbing engine captures not just sound but sentiment.",
-      "Because your audience doesn't want to hear a voice - they want to feel the voice.",
-      "At Vacaka.AI, we believe the future of AI voices isn't about sounding human - it's about feeling human.",
-    ],
-  },
-];
 
 const EmotionBanner: React.FC<EmotionBannerProps> = ({
   sections: sectionsProp,
@@ -136,7 +74,7 @@ const EmotionBanner: React.FC<EmotionBannerProps> = ({
                   <img
                     src={section.heroImage}
                     alt={section.title}
-                    className="w-7xl h-64 md:h-96 object-cover"
+                    className="w-7xl h-64 md:h-96 object-cover object-center scale-125"
                   />
                 </div>
 
