@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { socialLinks } from "../data";
+import { handleSubmit } from "../EmailService";
 
 const FooterLink: React.FC<{ href: string, children: React.ReactNode }> = ({ href, children }) => (
   <li>
@@ -13,17 +14,18 @@ const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      console.log(`Subscribing: ${email}`);
-      setSubscribed(true);
-      setTimeout(() => {
-        setSubscribed(false);
-        setEmail("");
-      }, 3000);
-    }
-  };
+const handleSubscribe = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (email) {
+    await handleSubmit(email);
+    console.log(`Subscribing: ${email}`);
+    setSubscribed(true);
+    setTimeout(() => {
+      setSubscribed(false);
+      setEmail("");
+    }, 3000);
+  }
+};
 
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -89,7 +91,7 @@ const Footer: React.FC = () => {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <a href="mailto:contactus@vacaka.ai">contactus@vacaka.ai</a>
+                  <a href="mailto:vacakaai@gmail.com">contactus@vacaka.ai</a>
                 </div>
               </div>
             </div>
