@@ -1,4 +1,5 @@
 export const Images = {
+  VACAKAAI_LOGO: "/Images/VacakaAI-Logo.svg",
   AASTHA: "/Images/Aastha.svg",
   ABOUT_US_BG: "/Images/About-Us-Bg.svg",
   ABOUT_US_PIC: "/Images/About-Us-Pic.svg",

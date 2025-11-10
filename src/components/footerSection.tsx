@@ -1,10 +1,17 @@
 import { useState } from "react";
 import { socialLinks } from "../data";
 import { handleSubmit } from "../EmailService";
+import { Images } from "../constants/svgPaths";
 
-const FooterLink: React.FC<{ href: string, children: React.ReactNode }> = ({ href, children }) => (
+const FooterLink: React.FC<{ href: string; children: React.ReactNode }> = ({
+  href,
+  children,
+}) => (
   <li>
-    <a href={href} className="text-gray-400 hover:text-white transition duration-200">
+    <a
+      href={href}
+      className="text-gray-400 hover:text-white transition duration-200"
+    >
       {children}
     </a>
   </li>
@@ -14,18 +21,18 @@ const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
-const handleSubscribe = async (e: React.FormEvent) => {
-  e.preventDefault();
-  if (email) {
-    await handleSubmit(email);
-    console.log(`Subscribing: ${email}`);
-    setSubscribed(true);
-    setTimeout(() => {
-      setSubscribed(false);
-      setEmail("");
-    }, 3000);
-  }
-};
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      await handleSubmit(email);
+      console.log(`Subscribing: ${email}`);
+      setSubscribed(true);
+      setTimeout(() => {
+        setSubscribed(false);
+        setEmail("");
+      }, 3000);
+    }
+  };
 
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -36,17 +43,14 @@ const handleSubscribe = async (e: React.FormEvent) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-gray-700/50 pb-12">
           <div className="lg:col-span-1">
-            <div className="flex items-center text-3xl font-bold mb-2 text-purple-400">
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-6 h-6 mr-1 text-purple-600"
-              >
-                <path d="M7 21L17 12L7 3V21Z" />
-              </svg>
-              Vācaka.AI
+            <div className="ml-18 items-center justify-center">
+              <img
+                src={Images.VACAKAAI_LOGO}
+                alt="Vacaka.AI"
+                className="h-16 rounded-md scale-400"
+              />
             </div>
-            <p className="text-sm text-purple-300 mb-8">
+            <p className="text-sm text-white mb-8">
               Go Live, Go Flawless, Go Regional
             </p>
 
@@ -146,7 +150,7 @@ const handleSubscribe = async (e: React.FormEvent) => {
               </div>
               <button
                 type="submit"
-                className="w-full py-3 px-6 bg-purple-700 text-white font-semibold rounded-xl shadow-lg hover:bg-purple-600 transition duration-200 focus:outline-none focus:ring-4 focus:ring-purple-300/50"
+                className="w-full py-3 px-6 bg-gradient-to-r from-pink-800 to-purple-800 text-white font-semibold rounded-xl shadow-lg hover:bg-purple-600 transition duration-200 focus:outline-none focus:ring-4 focus:ring-purple-300/50"
                 disabled={subscribed}
               >
                 {subscribed ? "Subscribed!" : "Subscribe"}
@@ -163,12 +167,12 @@ const handleSubscribe = async (e: React.FormEvent) => {
         <div className="flex flex-col sm:flex-row justify-between items-center pt-6">
           <div className="flex mb-4 sm:mb-0 gap-2">
             {socialLinks.map(({ icon, label }, index) => (
-              <a
-                key={index}
-                href="#"
-                aria-label={label}
-              >
-                <img src={icon} alt={label} className="w-12 h-12 object-cover" />
+              <a key={index} href="#" aria-label={label}>
+                <img
+                  src={icon}
+                  alt={label}
+                  className="w-12 h-12 object-cover"
+                />
               </a>
             ))}
           </div>

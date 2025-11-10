@@ -15,13 +15,13 @@ const navLinks = [
 const AppBar: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-100 backdrop-blur-md bg-black/60 border-b border-gray-800">
-      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-1 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Link to="/">
           <img
-            src = {Images.VACAKA_AI_LOGO}
+            src = {Images.VACAKAAI_LOGO}
             alt="Vacaka.AI"
-            className="h-16 border-2 border-gray-300 rounded-md"
+            className="h-16 rounded-md scale-350"
           />
           </Link>
         </div>

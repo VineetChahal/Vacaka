@@ -54,13 +54,10 @@ const RandomThoughts: React.FC = () => {
         </div>
 
         <div className="w-full h-72 bg-gray-800 rounded-2xl border border-gray-700 flex items-center justify-center mt-10">
-          <span className="text-gray-500 italic">[ Add Image Here ]</span>
-        </div>
-        <div className="border-1 border-red-300">
           <video width="640" height="360" controls>
             <source src="\Videos\Video 2.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video>{" "}
         </div>
       </div>
     </div>

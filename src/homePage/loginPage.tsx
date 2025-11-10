@@ -25,7 +25,7 @@ const LoginPage: React.FC = () => {
             <img
               src={Images.VACAKA_AI_LOGO}
               alt="VACAKA_AI_LOGO"
-              className="h-20 w-35 rounded-lg overflow-hidden"
+              className="h-20 w-35 rounded-lg overflow-hidden scale-200"
             />
           </div>
         </div>
