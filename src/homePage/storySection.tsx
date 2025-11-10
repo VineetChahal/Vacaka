@@ -1,5 +1,6 @@
 import React from "react";
 import { STORY_DATA, type Story } from "../data";
+import { Link } from "react-router-dom";
 
 const StoryCard: React.FC<Story> = ({
   title,
@@ -7,16 +8,15 @@ const StoryCard: React.FC<Story> = ({
   category,
   description,
   imageUrl,
-  readMoreUrl,
   color,
 }) => {
   return (
     <div className="flex flex-col bg-black text-white rounded-lg h-full relative group">
-      <div className="w-full h-58 bg-gray-900 overflow-hidden rounded-t-lg border-1 border-red-500">
+      <div className="w-full h-58 bg-gray-900 overflow-hidden rounded-t-lg">
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.05]"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.50] scale-140"
           onError={(e) => {
             e.currentTarget.onerror = null;
             e.currentTarget.src =
@@ -44,8 +44,8 @@ const StoryCard: React.FC<Story> = ({
 
       <div className="px-5 pb-5 pt-4 flex flex-col flex-grow">
         <p className="text-sm text-gray-400 mb-6 flex-grow">{description}</p>
-        <a
-          href={readMoreUrl}
+        <Link
+          to="/blogs"
           className="text-white text-sm font-medium flex items-center justify-center transition-colors hover:text-indigo-400 w-fit"
           onClick={(e) => e.preventDefault()}
           style={{ color: color }}
@@ -66,7 +66,7 @@ const StoryCard: React.FC<Story> = ({
               d="M14 5l7 7m0 0l-7 7m7-7H3"
             ></path>
           </svg>
-        </a>
+        </Link>
       </div>
     </div>
   );
