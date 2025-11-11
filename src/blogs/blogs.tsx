@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AppBar from "../components/AppBar";
 import { sections, type ContentSection } from "../data";
+import { Section } from "../homePage/homepage";
+import { useLocation } from "react-router-dom";
 interface EmotionBannerProps {
   sections?: ContentSection[];
 }
@@ -9,6 +11,21 @@ const EmotionBanner: React.FC<EmotionBannerProps> = ({
   sections: sectionsProp,
 }) => {
   const sectionsToRender: ContentSection[] = sectionsProp ?? sections;
+  const location = useLocation();
+
+  // 👇 Scroll to hash after mount/render
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 200); // small delay ensures DOM fully painted
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   const renderTextWithBrands = (
     text: string,
@@ -66,7 +83,8 @@ const EmotionBanner: React.FC<EmotionBannerProps> = ({
         {sectionsToRender.map(
           (section: ContentSection, sectionIndex: number) => {
             return (
-              <div
+              <Section
+                id={section.id}
                 key={sectionIndex}
                 className="space-y-8 glass rounded-xl p-8"
               >
@@ -107,7 +125,7 @@ const EmotionBanner: React.FC<EmotionBannerProps> = ({
                     ))}
                   </div>
                 </div>
-              </div>
+              </Section>
             );
           }
         )}

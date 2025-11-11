@@ -272,10 +272,12 @@ export interface Story {
   imageUrl: string;
   readMoreUrl: string;
   color: string;
+  path: string;
 }
 
 export const STORY_DATA: Story[] = [
   {
+    path: "story-1",
     id: 1,
     title: "When Our AI Tried to Speak Tamil (and What Happened Next!)",
     date: "November 2025",
@@ -287,6 +289,7 @@ export const STORY_DATA: Story[] = [
     color: " #a1c0f9",
   },
   {
+    path: "story-2",
     id: 2,
     title:
       "The Future of Dubbing is Real-Time (And India's Leading It! Watch for yourself)",
@@ -299,6 +302,7 @@ export const STORY_DATA: Story[] = [
     color: " #fb64b6",
   },
   {
+    path: "story-3",
     id: 3,
     title: "Why Emotion is the New Benchmark for Voice AI? (Let's Decode!)",
     date: "September 2025",
@@ -372,6 +376,7 @@ export const jobList = [
 // Blog Page - Emotion Banner Sections
 // -------------------------------------------------
 export interface ContentSection {
+  id: string;
   title: string;
   leftContent: string[];
   rightContent: string[];
@@ -380,6 +385,7 @@ export interface ContentSection {
 }
 export const sections: ContentSection[] = [
   {
+    id: "story-1",
     title: "When Our AI Tried to Speak Tamil (and What Happened Next!)",
     brandNames: ["Vacaka.AI"],
     heroImage: Images.BLOG_1,
@@ -397,6 +403,7 @@ export const sections: ContentSection[] = [
     ],
   },
   {
+    id: "story-2",
     title: "The Future of Dubbing Is Real-Time (And India's Leading It)",
     brandNames: ["Vācaka.AI’s Dubb™", "This is the era of “live it now.”"],
     heroImage: Images.BLOG_2,
@@ -415,6 +422,7 @@ export const sections: ContentSection[] = [
     ],
   },
   {
+    id: "story-3",
     title: "Why Emotion Is the New Benchmark for Voice AI",
     brandNames: ["Vacaka.AI"],
     heroImage: Images.BLOG_3,

@@ -9,6 +9,7 @@ const StoryCard: React.FC<Story> = ({
   description,
   imageUrl,
   color,
+  path,
 }) => {
   return (
     <div className="flex flex-col bg-black text-white rounded-lg h-full relative group">
@@ -45,9 +46,8 @@ const StoryCard: React.FC<Story> = ({
       <div className="px-5 pb-5 pt-4 flex flex-col flex-grow">
         <p className="text-sm text-gray-400 mb-6 flex-grow">{description}</p>
         <Link
-          to="/blogs"
+          to={`/blogs#${path}`}
           className="text-white text-sm font-medium flex items-center justify-center transition-colors hover:text-indigo-400 w-fit"
-          onClick={(e) => e.preventDefault()}
           style={{ color: color }}
         >
           READ MORE
