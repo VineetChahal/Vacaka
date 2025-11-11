@@ -16,6 +16,7 @@ import { Images } from "../constants/svgPaths";
 import { testimonials } from "../data";
 import AppBar from "../components/AppBar";
 import { GIFs } from "../constants/gifPaths";
+import ResearchInsight from "./ResearchInsight";
 
 interface SectionProps {
   id: string;
@@ -210,12 +211,13 @@ export default function VacakaLanding() {
       <Section id="community">
         <CommunityCarousel />
       </Section>
-      <Section id="pricing" className="-mb-40">
+      <Section id="pricing" className="-mb-80">
         <PricingCardSection />
       </Section>
-      <Section id="story" className="mb-10">
+      <Section id="story" className="-mb-20">
         <StorySections />
       </Section>
+      <ResearchInsight />
       <section className="mb-10">
         <div className="max-w-6xl mx-auto overflow-hidden flex flex-col items-center justify-center">
           <div className="flex items-center justify-center mb-9">
