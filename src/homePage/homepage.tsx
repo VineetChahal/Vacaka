@@ -211,10 +211,10 @@ export default function VacakaLanding() {
       <Section id="community">
         <CommunityCarousel />
       </Section>
-      <Section id="pricing" className="-mb-80">
+      <Section id="pricing" className="-mb-40">
         <PricingCardSection />
       </Section>
-      <Section id="story" className="-mb-20">
+      <Section id="story" className="mb-10">
         <StorySections />
       </Section>
       <ResearchInsight />
