@@ -21,11 +21,11 @@ const LoginPage: React.FC = () => {
       />
       <div className="relative bg-stone-100 rounded-3xl shadow-2xl p-12 max-w-md w-full text-center z-10">
         <div className="mb-8 inline-block">
-          <div className="w-18 h-18 bg-black rounded-2xl flex items-center justify-center">
+          <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center">
             <img
               src={Images.VACAKA_AI_LOGO}
               alt="VACAKA_AI_LOGO"
-              className="h-20 w-35 rounded-lg overflow-hidden scale-200"
+              className="rounded-lg overflow-hidden scale-200"
             />
           </div>
         </div>
