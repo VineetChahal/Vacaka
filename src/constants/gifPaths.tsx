@@ -11,6 +11,11 @@ export const GIFs = {
   CONNECT: "https://www.youtube.com/embed/Ol1UNq3w_SE",
   DUB: "https://www.youtube.com/embed/Ol1UNq3w_SE",
   RANDOM_THOUGHTS: "/Videos/Video 2.mp4",
+  AUDIO_BENGALI: "/Voices/Bengali.wav",
+  AUDIO_HINDI: "/Voices/Hindi.wav",
+  AUDIO_MARATHI: "/Voices/Marathi.wav",
+  AUDIO_PUNJABI: "/Voices/Punjabi.wav",
+  AUDIO_TAMIL: "/Voices/Tamil.wav",
 } as const;
 
 export type GIFKey = keyof typeof GIFs;

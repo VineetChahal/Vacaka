@@ -1,5 +1,6 @@
 import React, { useState, useRef, type ReactElement } from "react";
 import ReactPlayer from "react-player";
+import { GIFs } from "../constants/gifPaths";
 
 interface LanguageAudio {
   name: string;
@@ -7,11 +8,11 @@ interface LanguageAudio {
 }
 
 const audioList: LanguageAudio[] = [
-  { name: "Hindi", url: "/audio/hindi.mp3" },
-  { name: "Bengali", url: "/audio/bengali.mp3" },
-  { name: "Tamil", url: "/audio/tamil.mp3" },
-  { name: "Punjabi", url: "/audio/punjabi.mp3" },
-  { name: "Marathi", url: "/audio/marathi.mp3" },
+  { name: "Hindi", url: GIFs.AUDIO_HINDI },
+  { name: "Bengali", url: GIFs.AUDIO_BENGALI },
+  { name: "Tamil", url: GIFs.AUDIO_TAMIL },
+  { name: "Punjabi", url: GIFs.AUDIO_PUNJABI },
+  { name: "Marathi", url: "/Voices/Tamil.wav" },
 ];
 
 export default function VoiceDemo(): ReactElement {

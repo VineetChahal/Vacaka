@@ -71,7 +71,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     if (formData.email) {
       const email = formData.email;
-      await handleSubmit({ email, type: "subscribe" });
+      await handleSubmit({ email, type: "query" });
       console.log(`Subscribing: ${email}`);
       setTimeout(() => {
         setFormData({
